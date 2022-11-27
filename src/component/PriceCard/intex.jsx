@@ -65,7 +65,7 @@ const PriceCard = () => {
 						</label>
 						<div className="inputCheckWrapper">
 							<div className="inputContext">
-								<input id="zipCode" type="number" />
+								<input id="zipCode" type="number" placeholder="Zip Code" />
 								<div className="inputIcon">
 									<svg
 										viewBox="0 0 28 28"

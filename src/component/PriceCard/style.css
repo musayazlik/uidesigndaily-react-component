@@ -39,13 +39,14 @@
       transform: translateX(-50%);
       top: 60px; }
       .PriceCardComponent .card-context .card .price span {
-        font-size: 52px;
+        font-size: 40px;
         font-weight: 900; }
       .PriceCardComponent .card-context .card .price p {
         font-size: 18px;
         line-height: 23px;
         font-weight: 500;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        margin-top: 12px; }
       .PriceCardComponent .card-context .card .buyButton {
         display: flex;
         flex-direction: column;
@@ -58,7 +59,11 @@
           text-align: center;
           background: linear-gradient(96.58deg, #5ff489 0%, #79f4f4 100%);
           border-radius: 8px;
-          cursor: pointer; }
+          cursor: pointer;
+          text-transform: uppercase;
+          transition: all 0.2s linear; }
+          .PriceCardComponent .card-context .card .buyButton button:hover {
+            box-shadow: 0 6px 12px 1px rgba(95, 244, 137, 0.2); }
         .PriceCardComponent .card-context .card .buyButton span {
           display: flex;
           margin: 16px 0 24px 0;
@@ -91,7 +96,7 @@
             margin-bottom: 0; }
       .PriceCardComponent .card-context .card .zipCode {
         padding: 16px;
-        background: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
+        background: #f3f5ff;
         border-radius: 8px;
         margin-bottom: 40px; }
         .PriceCardComponent .card-context .card .zipCode label {
@@ -113,8 +118,11 @@
             color: #292e5a;
             font-weight: 700;
             border-radius: 8px;
-            background: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
+            background: transparent;
             width: 100%; }
+            .PriceCardComponent .card-context .card .zipCode .inputContext input::placeholder {
+              color: #292e5a;
+              font-weight: 700; }
             .PriceCardComponent .card-context .card .zipCode .inputContext input::-webkit-outer-spin-button, .PriceCardComponent .card-context .card .zipCode .inputContext input::-webkit-inner-spin-button {
               -webkit-appearance: none;
               margin: 0; }

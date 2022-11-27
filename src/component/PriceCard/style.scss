@@ -4,10 +4,11 @@ $bgBackGradient: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
 $text-color: #292e5a;
 $h1Line: #292e5a;
 $white: #fff;
-$buttonGradient: linear-gradient(96.58deg, #5ff489 0%, #79f4f4 100%);
+$buyButtonGradient: linear-gradient(96.58deg, #5ff489 0%, #79f4f4 100%);
 $inputBorder: 1px solid #b3c7e3;
 $pickUpInStoreBg: linear-gradient(96.58deg, #9cc4ff 0%, #b4a8ff 100%);
 $cardBoxShadow: 0px 34px 94px -30px #b3c7e3;
+$zipCodeBg: #f3f5ff;
 
 * {
 	margin: 0;
@@ -71,7 +72,7 @@ $cardBoxShadow: 0px 34px 94px -30px #b3c7e3;
 
 			.price {
 				span {
-					font-size: 52px;
+					font-size: 40px;
 					font-weight: 900;
 				}
 				p {
@@ -79,6 +80,7 @@ $cardBoxShadow: 0px 34px 94px -30px #b3c7e3;
 					line-height: 23px;
 					font-weight: 500;
 					margin-bottom: 50px;
+					margin-top: 12px;
 				}
 			}
 
@@ -93,9 +95,15 @@ $cardBoxShadow: 0px 34px 94px -30px #b3c7e3;
 					padding: 24px 0;
 					border: none;
 					text-align: center;
-					background: $buttonGradient;
+					background: $buyButtonGradient;
 					border-radius: 8px;
 					cursor: pointer;
+					text-transform: uppercase;
+					transition: all 0.2s linear;
+
+					&:hover {
+						box-shadow: 0 6px 12px 1px rgba($color: #5ff489, $alpha: 0.2);
+					}
 				}
 				span {
 					display: flex;
@@ -139,7 +147,7 @@ $cardBoxShadow: 0px 34px 94px -30px #b3c7e3;
 			}
 			.zipCode {
 				padding: 16px;
-				background: $bgBackGradient;
+				background: $zipCodeBg;
 				border-radius: 8px;
 				margin-bottom: 40px;
 
@@ -167,8 +175,13 @@ $cardBoxShadow: 0px 34px 94px -30px #b3c7e3;
 						color: $text-color;
 						font-weight: 700;
 						border-radius: 8px;
-						background: $bgBackGradient;
+						background: transparent;
 						width: 100%;
+
+						&::placeholder {
+							color: $text-color;
+							font-weight: 700;
+						}
 
 						&::-webkit-outer-spin-button,
 						&::-webkit-inner-spin-button {

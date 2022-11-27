@@ -1,5 +1,5 @@
 # UiDesignDaily React Components Library
 
-> ## Enter Password
+## Price Card Component
 
-![Enter Password Component](./src/assets/image/enter-password.png)
+![Price Card Component](./src/assets/image/pricecard.png)
