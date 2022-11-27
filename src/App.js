@@ -1,11 +1,12 @@
 import "./App.css";
-import EnterPassword from "./component/EnterPassword/intex";
+
+import PriceCard from "./component/PriceCard/intex";
 
 function App() {
 	return (
 		<div className="App">
 			{/* Components */}
-			<EnterPassword />
+			<PriceCard />
 		</div>
 	);
 }

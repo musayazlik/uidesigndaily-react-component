@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+
+$bgBackGradient: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
+$text-color: #292e5a;
+$h1Line: #292e5a;
+$white: #fff;
+$buttonGradient: linear-gradient(96.58deg, #5ff489 0%, #79f4f4 100%);
+$inputBorder: 1px solid #b3c7e3;
+$pickUpInStoreBg: linear-gradient(96.58deg, #9cc4ff 0%, #b4a8ff 100%);
+$cardBoxShadow: 0px 34px 94px -30px #b3c7e3;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Mulish", sans-serif;
+	color: $text-color;
+}
+
+.PriceCardComponent {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 32px;
+	align-items: center;
+	margin-bottom: 120px;
+
+	h1 {
+		font-weight: 900;
+		font-size: 48px;
+		margin-bottom: 32px;
+		letter-spacing: -0.5px;
+
+		// &::after {
+		// 	content: "";
+		// 	display: block;
+		// 	width: 100%;
+		// 	height: 8px;
+		// 	opacity: 0.3;
+		// 	filter: blur(8px);
+		// 	border-radius: 100%;
+		// 	background: $h1Line;
+		// 	margin-top: 10px;
+		// }
+	}
+
+	.card-context {
+		position: relative;
+
+		.cardBack {
+			background: $bgBackGradient;
+			width: 620px;
+			height: 730px;
+			display: block;
+			border-radius: 50px;
+		}
+
+		.card {
+			position: absolute;
+			padding: 60px;
+			background: $white;
+			width: calc(100% - 120px);
+			border-radius: 30px;
+			box-shadow: $cardBoxShadow;
+
+			left: 50%;
+			transform: translateX(-50%);
+			top: 60px;
+
+			.price {
+				span {
+					font-size: 52px;
+					font-weight: 900;
+				}
+				p {
+					font-size: 18px;
+					line-height: 23px;
+					font-weight: 500;
+					margin-bottom: 50px;
+				}
+			}
+
+			.buyButton {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+
+				button {
+					font-size: 20px;
+					font-weight: 700;
+					padding: 24px 0;
+					border: none;
+					text-align: center;
+					background: $buttonGradient;
+					border-radius: 8px;
+					cursor: pointer;
+				}
+				span {
+					display: flex;
+					margin: 16px 0 24px 0;
+					font-size: 18px;
+				}
+			}
+
+			.featuresList {
+				margin-bottom: 32px;
+				.list-item {
+					display: flex;
+					align-items: center;
+					margin-bottom: 14px;
+
+					.item-icon {
+						background: $bgBackGradient;
+						border-radius: 50%;
+						width: 35px;
+						height: 35px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						margin-right: 4px;
+						svg {
+							width: 25px;
+							height: 25px;
+							fill: $text-color;
+						}
+					}
+
+					.item-text p {
+						display: flex;
+						gap: 6px;
+						align-items: center;
+						justify-content: center;
+						font-weight: 700;
+						margin-bottom: 0;
+					}
+				}
+			}
+			.zipCode {
+				padding: 16px;
+				background: $bgBackGradient;
+				border-radius: 8px;
+				margin-bottom: 40px;
+
+				label {
+					font-size: 18px;
+					color: $text-color;
+					font-weight: 700;
+				}
+
+				.inputCheckWrapper {
+					display: flex;
+					align-items: stretch;
+					margin-top: 12px;
+					justify-content: start;
+				}
+
+				.inputContext {
+					position: relative;
+
+					input {
+						padding: 16px 16px 16px 48px;
+						border: $inputBorder;
+						font-size: 18px;
+						line-height: 23px;
+						color: $text-color;
+						font-weight: 700;
+						border-radius: 8px;
+						background: $bgBackGradient;
+						width: 100%;
+
+						&::-webkit-outer-spin-button,
+						&::-webkit-inner-spin-button {
+							-webkit-appearance: none;
+							margin: 0;
+						}
+
+						&[type="number"] {
+							-moz-appearance: textfield;
+						}
+					}
+
+					.inputIcon {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: 16px;
+						width: 28px;
+						height: 28px;
+					}
+				}
+
+				.zipCodeInput {
+					margin-top: 8px;
+				}
+
+				.checkButton {
+					font-size: 18px;
+					font-weight: 700;
+					background: $white;
+					color: $text-color;
+					padding: 0 28px;
+					border: none;
+					margin-left: 16px;
+					border-radius: 8px;
+					cursor: pointer;
+				}
+			}
+
+			.pickUpInStore {
+				button {
+					width: 100%;
+					text-transform: uppercase;
+					font-size: 18px;
+					font-weight: 700;
+					color: $text-color;
+					border-radius: 8px;
+					background: $pickUpInStoreBg;
+					padding: 28px 0;
+					border: none;
+					transition: all 0.2s linear;
+
+					&:hover {
+						box-shadow: 0 6px 12px 1px rgba($color: #b4a8ff, $alpha: 0.2);
+					}
+				}
+			}
+		}
+	}
+}

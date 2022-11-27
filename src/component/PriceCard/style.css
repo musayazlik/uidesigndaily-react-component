@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  color: #292e5a; }
+
+.PriceCardComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  align-items: center;
+  margin-bottom: 120px; }
+  .PriceCardComponent h1 {
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px; }
+  .PriceCardComponent .card-context {
+    position: relative; }
+    .PriceCardComponent .card-context .cardBack {
+      background: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
+      width: 620px;
+      height: 730px;
+      display: block;
+      border-radius: 50px; }
+    .PriceCardComponent .card-context .card {
+      position: absolute;
+      padding: 60px;
+      background: #fff;
+      width: calc(100% - 120px);
+      border-radius: 30px;
+      box-shadow: 0px 34px 94px -30px #b3c7e3;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 60px; }
+      .PriceCardComponent .card-context .card .price span {
+        font-size: 52px;
+        font-weight: 900; }
+      .PriceCardComponent .card-context .card .price p {
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 500;
+        margin-bottom: 50px; }
+      .PriceCardComponent .card-context .card .buyButton {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .PriceCardComponent .card-context .card .buyButton button {
+          font-size: 20px;
+          font-weight: 700;
+          padding: 24px 0;
+          border: none;
+          text-align: center;
+          background: linear-gradient(96.58deg, #5ff489 0%, #79f4f4 100%);
+          border-radius: 8px;
+          cursor: pointer; }
+        .PriceCardComponent .card-context .card .buyButton span {
+          display: flex;
+          margin: 16px 0 24px 0;
+          font-size: 18px; }
+      .PriceCardComponent .card-context .card .featuresList {
+        margin-bottom: 32px; }
+        .PriceCardComponent .card-context .card .featuresList .list-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 14px; }
+          .PriceCardComponent .card-context .card .featuresList .list-item .item-icon {
+            background: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 4px; }
+            .PriceCardComponent .card-context .card .featuresList .list-item .item-icon svg {
+              width: 25px;
+              height: 25px;
+              fill: #292e5a; }
+          .PriceCardComponent .card-context .card .featuresList .list-item .item-text p {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 0; }
+      .PriceCardComponent .card-context .card .zipCode {
+        padding: 16px;
+        background: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
+        border-radius: 8px;
+        margin-bottom: 40px; }
+        .PriceCardComponent .card-context .card .zipCode label {
+          font-size: 18px;
+          color: #292e5a;
+          font-weight: 700; }
+        .PriceCardComponent .card-context .card .zipCode .inputCheckWrapper {
+          display: flex;
+          align-items: stretch;
+          margin-top: 12px;
+          justify-content: start; }
+        .PriceCardComponent .card-context .card .zipCode .inputContext {
+          position: relative; }
+          .PriceCardComponent .card-context .card .zipCode .inputContext input {
+            padding: 16px 16px 16px 48px;
+            border: 1px solid #b3c7e3;
+            font-size: 18px;
+            line-height: 23px;
+            color: #292e5a;
+            font-weight: 700;
+            border-radius: 8px;
+            background: linear-gradient(120deg, #e9e8ff 0%, #e7f3ff 100%);
+            width: 100%; }
+            .PriceCardComponent .card-context .card .zipCode .inputContext input::-webkit-outer-spin-button, .PriceCardComponent .card-context .card .zipCode .inputContext input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0; }
+            .PriceCardComponent .card-context .card .zipCode .inputContext input[type="number"] {
+              -moz-appearance: textfield; }
+          .PriceCardComponent .card-context .card .zipCode .inputContext .inputIcon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 16px;
+            width: 28px;
+            height: 28px; }
+        .PriceCardComponent .card-context .card .zipCode .zipCodeInput {
+          margin-top: 8px; }
+        .PriceCardComponent .card-context .card .zipCode .checkButton {
+          font-size: 18px;
+          font-weight: 700;
+          background: #fff;
+          color: #292e5a;
+          padding: 0 28px;
+          border: none;
+          margin-left: 16px;
+          border-radius: 8px;
+          cursor: pointer; }
+      .PriceCardComponent .card-context .card .pickUpInStore button {
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        color: #292e5a;
+        border-radius: 8px;
+        background: linear-gradient(96.58deg, #9cc4ff 0%, #b4a8ff 100%);
+        padding: 28px 0;
+        border: none;
+        transition: all 0.2s linear; }
+        .PriceCardComponent .card-context .card .pickUpInStore button:hover {
+          box-shadow: 0 6px 12px 1px rgba(180, 168, 255, 0.2); }
